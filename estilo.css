@@ -1,4 +1,4 @@
-* {
+body {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   margin: 0;
@@ -235,11 +235,23 @@
 
 .to,
 .tw {
-  inset-inline-end: -6px;
+  inset-inline-end: -2px;
   inset-block-start: 12px;
 }
 
 .tablet-icon {
+  display: none;
+}
+
+.menu__mobile {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  background-color: #ffffff;
+  inset-inline-start: 74px;
+  inset-block-start: 0px;
+  align-items: center;
   display: none;
 }
 
@@ -348,6 +360,10 @@
   .tablet-icon {
     display: none;
   }
+
+  .menu__mobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -413,6 +429,10 @@
 }
 
 @media screen and (max-width: 375px) {
+  .navi__five {
+    display: none;
+  }
+
   .tablet-icon {
     display: flex;
     width: 104px;
@@ -432,7 +452,62 @@
   }
 
   .principal {
-    inset-inline-start: 18px;
+    inset-inline-start: -20px;
     inset-block-start: 30px;
+    width: 320px;
+  }
+
+  .fuentes {
+    inset-inline-end: -100px;
+  }
+
+  .menu__mobile {
+    position: absolute;
+    height: 100%;
+    width: 282px;
+    background-color: #ffffff;
+    inset-inline-start: 74px;
+    inset-block-start: 0px;
+    align-items: center;
+    display: none;
+  }
+
+  .close:target {
+    display: none;
+  }
+
+  .mobile__nav {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    inset-block-start: 288px;
+  }
+
+  .mobile__ul {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 288px;
+  }
+
+  .mobile__ul > li {
+    list-style-type: none;
+    margin-block-end: 22px;
+  }
+
+  .mobile__ul > li a {
+    text-decoration: none;
+    color: rgba(49, 50, 53, 1);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .closed {
+    position: absolute;
+    inset-block-start: 32px;
+    inset-inline-start: 244px;
+  }
+
+  #menu_one_mobile:target {
+    display: flex;
   }
 }
